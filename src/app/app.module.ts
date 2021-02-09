@@ -1,10 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppComponent} from './app.component';
-import {UserModule} from './user/user.module';
 import {RouterModule} from '@angular/router';
-import {UsersComponent} from './user/components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -12,11 +9,9 @@ import {UsersComponent} from './user/components/users/users.component';
   ],
   imports: [
     BrowserModule,
-    UserModule,
     RouterModule.forRoot(
       [
-        {path: 'users', component: UsersComponent}
-        // {path: 'posts', component: Component}
+        {path: 'users', loadChildren: () => import('./user/user.module').then(m => m.UserModule)}
       ]
     )
   ],
