@@ -9,7 +9,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
   @Input()
   user: User;
 
