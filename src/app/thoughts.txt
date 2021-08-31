@@ -1,0 +1,3 @@
+okay what do i even want to do here.
+
+I could set it up so it communicates with my server 8080 from java and just pulls to a screen
